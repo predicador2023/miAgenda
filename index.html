@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Agenda</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ===========================
+             DASHBOARD
+        ============================ -->
+
+        <header class="dashboard">
+
+            <div class="hero-card">
+
+                <h1 id="greeting">
+                    👋 Buenos días, Jose
+                </h1>
+
+                <p id="currentDate">
+                    Domingo, 8 de Noviembre de 2026
+                </p>
+
+                <div class="hero-summary">
+
+                    <div class="summary-item">
+
+                        <span id="totalActivities">
+                            0
+                        </span>
+
+                        <small>
+                            Actividades
+                        </small>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span id="pendingActivities">
+                            0
+                        </span>
+
+                        <small>
+                            Pendientes
+                        </small>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span id="completedActivities">
+                            0
+                        </span>
+
+                        <small>
+                            Completadas
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ===========================
+             PROXIMA ACTIVIDAD
+        ============================ -->
+
+        <section class="next-activity">
+
+            <h2>
+                Próxima actividad
+            </h2>
+
+            <div id="nextActivityCard"
+                 class="activity-card">
+
+                <h3 id="nextActivityTitle">
+                    🎉 No tienes actividades
+                </h3>
+
+                <p id="nextActivityTime">
+                    Sin eventos programados
+                </p>
+
+                <p id="nextActivityCategory">
+                    Disfruta tu día
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+             MENSAJE DEL DIA
+        ============================ -->
+
+        <section class="daily-message">
+
+            <div class="message-card">
+
+                <p id="dailyMessage">
+
+                    "Lo importante no es tener tiempo,
+                    sino decidir qué hacer con él."
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+             ACTIVIDADES DE HOY
+        ============================ -->
+
+        <section class="today-activities">
+
+            <h2>
+                Actividades de Hoy
+            </h2>
+
+            <div id="activitiesContainer">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- ===========================
+         BOTON FLOTANTE
+    ============================ -->
+
+    
+
+    <!-- ===========================
+         MODAL
+    ============================ -->
+
+    <div id="activityModal"
+         class="activity-modal">
+
+        <form id="activityForm">
+
+            <h2>
+                Nueva Actividad
+            </h2>
+
+            <input type="text"
+                   id="title"
+                   placeholder="Título de la actividad"
+                   required>
+
+            <input type="date"
+                   id="date"
+                   required>
+
+            <input type="time"
+                   id="startTime"
+                   required>
+
+            <input type="time"
+                   id="endTime"
+                   required>
+
+            <select id="category">
+
+                <option value="Trabajo">
+                    Trabajo
+                </option>
+
+                <option value="Salud">
+                    Salud
+                </option>
+
+                <option value="Familia">
+                    Familia
+                </option>
+
+                <option value="Espiritual">
+                    Espiritual
+                </option>
+
+                <option value="Personal">
+                    Personal
+                </option>
+
+            </select>
+
+            <button type="submit">
+
+                Guardar Actividad
+
+            </button>
+
+            <button type="button"
+                    id="closeModal"
+                    class="close-modal">
+
+                Cancelar
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- ===========================
+         NAVEGACION INFERIOR
+    ============================ -->
+
+   <nav class="bottom-navbar">
+
+    <button id="homeBtn">
+        🏠
+    </button>
+
+    <button id="calendarBtn">
+        📅
+    </button>
+
+    <button
+        id="addActivityBtn"
+        class="center-button"
+    >
+        +
+    </button>
+
+    <button id="statsBtn">
+        📊
+    </button>
+
+    <button id="menuBtn">
+        ☰
+    </button>
+
+</nav>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
