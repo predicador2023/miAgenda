@@ -94,6 +94,61 @@ body{
     font-size:.95rem;
 }
 
+.hero-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:12px;
+}
+
+.theme-toggle{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .18
+        );
+
+    color:white;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    flex-shrink:0;
+
+    transition:.25s;
+}
+
+.theme-toggle:hover{
+
+    transform:scale(1.06);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .25
+        );
+}
+
 /* ===================================
    ESTADISTICAS
 =================================== */
@@ -454,6 +509,98 @@ section h2{
     color:white;
 }
 
+/* ===================================
+   MODO CLARO
+=================================== */
+
+body.light-theme{
+
+    background:#f3f4f6;
+
+    color:#111827;
+}
+
+body.light-theme .activity-card,
+body.light-theme .message-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+}
+
+body.light-theme .activity-card p{
+
+    color:#4b5563;
+}
+
+body.light-theme .message-card{
+
+    color:#111827;
+}
+
+body.light-theme .bottom-navbar{
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .85
+        );
+
+    border:1px solid
+        rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+}
+
+body.light-theme .bottom-navbar button{
+
+    color:#111827;
+}
+
+body.light-theme .theme-toggle{
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .3
+        );
+}
+
+body.light-theme section h2{
+
+    color:#111827;
+}
+
+body.light-theme .activity-modal form{
+
+    background:#ffffff;
+}
+
+body.light-theme .activity-modal input,
+body.light-theme .activity-modal select{
+
+    background:#f3f4f6;
+
+    color:#111827;
+
+    border:1px solid #d1d5db;
+}
 /* ===================================
    MOVILES PEQUEÑOS
 =================================== */

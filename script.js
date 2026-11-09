@@ -40,6 +40,10 @@ const closeModal =
 
 const activityForm =
     document.getElementById("activityForm");
+const themeToggle =
+    document.getElementById(
+        "themeToggle"
+    );    
 
 // =====================================
 // LOCAL STORAGE
@@ -66,6 +70,83 @@ function initialize() {
 
     updateDashboard();
 }
+
+// ======================
+// TEMA
+// ======================
+
+loadTheme();
+
+themeToggle.addEventListener(
+    "click",
+    toggleTheme
+);
+
+function toggleTheme() {
+
+    if (
+        document.body.classList.contains(
+            "light-theme"
+        )
+    ) {
+
+        document.body.classList.remove(
+            "light-theme"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
+
+        themeToggle.textContent =
+            "🌙";
+
+    } else {
+
+        document.body.classList.add(
+            "light-theme"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
+
+        themeToggle.textContent =
+            "☀️";
+    }
+}
+
+function loadTheme() {
+
+    const savedTheme =
+        localStorage.getItem(
+            "theme"
+        );
+
+    if (
+        savedTheme === "light"
+    ) {
+
+        document.body.classList.add(
+            "light-theme"
+        );
+
+        themeToggle.textContent =
+            "☀️";
+
+    } else {
+
+        document.body.classList.remove(
+            "light-theme"
+        );
+
+        themeToggle.textContent =
+            "🌙";
+    }
+}
+
 
 // =====================================
 // SALUDO
