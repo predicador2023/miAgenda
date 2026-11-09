@@ -601,6 +601,38 @@ body.light-theme .activity-modal select{
 
     border:1px solid #d1d5db;
 }
+
+.nav-icon{
+
+    width:24px;
+
+    height:24px;
+
+    stroke:currentColor;
+
+    stroke-width:2;
+
+    fill:none;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+}
+
+.bottom-navbar button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+body.light-theme .nav-icon{
+
+    stroke:#111827;
+}
+
 /* ===================================
    MOVILES PEQUEÑOS
 =================================== */
